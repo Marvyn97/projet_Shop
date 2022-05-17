@@ -17,3 +17,24 @@ export const getProductAll = async(req, res) => {
         });
     }
 }
+
+export const getOneProduct = async (req, res) => {
+    const id = req.params.id
+
+    const query = `SELECT * FROM product WHERE id = ?`;
+    try {
+        await Product.getOneProduct(query, id);
+        res.json({
+            status: 200,
+            msg: "affichage de votre produit effectué",
+        })
+    } catch (error) {
+        console.log(error);
+        res.json({
+            status: 404,
+            msg: "problème d'affichage de votre produit",
+        })
+    }
+}
+
+

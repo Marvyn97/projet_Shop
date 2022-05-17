@@ -7,7 +7,7 @@ class User {
         return result;
     }
 
-    static async getUsers({query, value}){
+    static async getUsers(query, value){
         const result = await pool.execute(query, [value]);
         return result;
     }
