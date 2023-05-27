@@ -11,8 +11,9 @@ const router = express.Router();
 router.use("/api/v1/product", productRoutes);
 router.use("/api/v1/auth", authRoutes);
 router.use("/api/v1/order", orderRoutes);
-router.use("api/v1/orderDetail", orderDetailRoutes);
-router.use("api/v1/admin", adminRoutes);
-router.use("api/v1/user", userRoutes);
+router.use("/api/v1/orderDetail", orderDetailRoutes);
+router.use("/api/v1/admin", adminRoutes);
+router.use("/api/v1/user", userRoutes);
+
 
 export default router;
